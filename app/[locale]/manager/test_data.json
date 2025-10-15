@@ -1,0 +1,207 @@
+{
+    "id": "7d22961f-c598-4c0c-a4ce-2bf91f3ea71a",
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "group_id": 2,
+            "name": "administration",
+            "enabled": true,
+            "report": [
+                {
+                    "id": 18,
+                    "name": "users",
+                    "default": "enabled",
+                    "min_user": 4,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 16,
+                    "name": "workers",
+                    "default": "enabled",
+                    "min_user": 2,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 17,
+                    "name": "workers groups",
+                    "default": "enabled",
+                    "min_user": 2,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 19,
+                    "name": "users groups",
+                    "default": "enabled",
+                    "min_user": 2,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 20,
+                    "name": "objects groups",
+                    "default": "enabled",
+                    "min_user": 2,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "group_id": 5,
+            "name": "report",
+            "enabled": true,
+            "report": [
+                {
+                    "id": 1,
+                    "name": "object overview",
+                    "default": "enabled",
+                    "min_user": 4,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 2,
+                    "name": "trip stop",
+                    "default": "enabled",
+                    "min_user": 4,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 3,
+                    "name": "toll cost",
+                    "default": "enabled",
+                    "min_user": 4,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 4,
+                    "name": "valid raw messages",
+                    "default": "enabled",
+                    "min_user": 4,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 5,
+                    "name": "input report",
+                    "default": "enabled",
+                    "min_user": 4,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 6,
+                    "name": "fuel level report",
+                    "default": "enabled",
+                    "min_user": 4,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 7,
+                    "name": "distance fuel engine hours",
+                    "default": "enabled",
+                    "min_user": 4,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "group_id": 4,
+            "name": "tachograph",
+            "enabled": true,
+            "report": [
+                {
+                    "id": 8,
+                    "name": "drivers",
+                    "default": "enabled",
+                    "min_user": 2,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 9,
+                    "name": "vehicles",
+                    "default": "enabled",
+                    "min_user": 2,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 10,
+                    "name": "files",
+                    "default": "enabled",
+                    "min_user": 3,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 11,
+                    "name": "live states",
+                    "default": "enabled",
+                    "min_user": 3,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 12,
+                    "name": "faults and events",
+                    "default": "enabled",
+                    "min_user": 3,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 13,
+                    "name": "read statuses",
+                    "default": "enabled",
+                    "min_user": 3,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 14,
+                    "name": "distance driven stats",
+                    "default": "enabled",
+                    "min_user": 3,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                },
+                {
+                    "id": 15,
+                    "name": "driving stats by driver card data",
+                    "default": "enabled",
+                    "min_user": 3,
+                    "enabled": true,
+                    "exception_set": false,
+                    "visible": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,479 @@
+{
+    "routes": [
+        {
+            "id": "7dc94fb2-4c27-4c84-9363-756a03ef54dd",
+            "sections": [
+                {
+                    "id": "da474ed4-4441-4047-962f-13309ed1d3c5",
+                    "type": "vehicle",
+                    "departure": {
+                        "time": "2025-09-04T18:02:40+07:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": -7.2641895,
+                                "lng": 112.73615
+                            },
+                            "originalLocation": {
+                                "lat": -7.26419,
+                                "lng": 112.73615
+                            }
+                        }
+                    },
+                    "arrival": {
+                        "time": "2025-09-04T20:19:24+07:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": -7.9828718,
+                                "lng": 112.6267742
+                            },
+                            "originalLocation": {
+                                "lat": -7.98287,
+                                "lng": 112.62677
+                            }
+                        }
+                    },
+                    "summary": {
+                        "duration": 8204,
+                        "length": 107266,
+                        "baseDuration": 7574,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "IDR",
+                                "value": 23000.0
+                            }
+                        }
+                    },
+                    "travelSummary": {
+                        "duration": 8204,
+                        "length": 107266,
+                        "baseDuration": 7574,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "IDR",
+                                "value": 23000.0
+                            }
+                        }
+                    },
+                    "polyline": "BG0p81qDk0lv..",
+                    "spans": [
+                        {
+                            "offset": 0,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        },
+                        {
+                            "offset": 1,
+                            "carAttributes": [
+                                "open",
+                                "noThrough"
+                            ]
+                        },
+                        {
+                            "offset": 9,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        },
+                        {
+                            "offset": 10,
+                            "carAttributes": [
+                                "open",
+                                "noThrough"
+                            ]
+                        },
+                        {
+                            "offset": 17,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        },
+                        {
+                            "offset": 192,
+                            "carAttributes": [
+                                "open",
+                                "tollRoad"
+                            ]
+                        },
+                        {
+                            "offset": 1385,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        }
+                    ],
+                    "transport": {
+                        "mode": "truck"
+                    },
+                    "tolls": [
+                        {
+                            "countryCode": "IDN",
+                            "tollSystemRef": 0,
+                            "tollSystem": "INDONESIA TOLL ROAD AUTHORITY",
+                            "tollSystems": [
+                                0
+                            ],
+                            "fares": [
+                                {
+                                    "id": "9a3bec86-d5e8-4670-952f-ba341005ab2c",
+                                    "name": "INDONESIA TOLL ROAD AUTHORITY",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 4500.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 4500.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "travelCard"
+                                    ]
+                                }
+                            ],
+                            "tollCollectionLocations": [
+                                {
+                                    "name": "Asemrowo",
+                                    "location": {
+                                        "lat": -7.24649,
+                                        "lng": 112.70961
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "countryCode": "IDN",
+                            "tollSystemRef": 0,
+                            "tollSystem": "INDONESIA TOLL ROAD AUTHORITY",
+                            "tollSystems": [
+                                0
+                            ],
+                            "fares": [
+                                {
+                                    "id": "bce43104-eb98-427d-8c9d-a27d64e482e1",
+                                    "name": "INDONESIA TOLL ROAD AUTHORITY",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 12500.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 12500.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "travelCard"
+                                    ]
+                                }
+                            ],
+                            "tollCollectionLocations": [
+                                {
+                                    "name": "Taman",
+                                    "location": {
+                                        "lat": -7.34764,
+                                        "lng": 112.71064
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "countryCode": "IDN",
+                            "tollSystemRef": 0,
+                            "tollSystem": "INDONESIA TOLL ROAD AUTHORITY",
+                            "tollSystems": [
+                                0
+                            ],
+                            "fares": [
+                                {
+                                    "id": "fac2c03a-1f96-4aa6-b691-16e8ef0070c6",
+                                    "name": "INDONESIA TOLL ROAD AUTHORITY",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 6000.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 6000.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "travelCard"
+                                    ]
+                                }
+                            ],
+                            "tollCollectionLocations": [
+                                {
+                                    "name": "Sidoarjo",
+                                    "location": {
+                                        "lat": -7.44439,
+                                        "lng": 112.69747
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "tollSystems": [
+                        {
+                            "id": 7329,
+                            "name": "INDONESIA TOLL ROAD AUTHORITY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "00b58d50-002b-493d-a26e-4b3771d01d42",
+            "sections": [
+                {
+                    "id": "e77e7f39-d891-4fa3-accb-723355c3236b",
+                    "type": "vehicle",
+                    "departure": {
+                        "time": "2025-09-04T18:02:40+07:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": -7.2641895,
+                                "lng": 112.73615
+                            },
+                            "originalLocation": {
+                                "lat": -7.26419,
+                                "lng": 112.73615
+                            }
+                        }
+                    },
+                    "arrival": {
+                        "time": "2025-09-04T21:01:52+07:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": -7.9828718,
+                                "lng": 112.6267742
+                            },
+                            "originalLocation": {
+                                "lat": -7.98287,
+                                "lng": 112.62677
+                            }
+                        }
+                    },
+                    "summary": {
+                        "duration": 10752,
+                        "length": 115764,
+                        "baseDuration": 9829,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "IDR",
+                                "value": 25500.0
+                            }
+                        }
+                    },
+                    "travelSummary": {
+                        "duration": 10752,
+                        "length": 115764,
+                        "baseDuration": 9829,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "IDR",
+                                "value": 25500.0
+                            }
+                        }
+                    },
+                    "polyline": "BG0p81qDk0lv..",
+                    "spans": [
+                        {
+                            "offset": 0,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        },
+                        {
+                            "offset": 1,
+                            "carAttributes": [
+                                "open",
+                                "noThrough"
+                            ]
+                        },
+                        {
+                            "offset": 9,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        },
+                        {
+                            "offset": 10,
+                            "carAttributes": [
+                                "open",
+                                "noThrough"
+                            ]
+                        },
+                        {
+                            "offset": 17,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        },
+                        {
+                            "offset": 192,
+                            "carAttributes": [
+                                "open",
+                                "tollRoad"
+                            ]
+                        },
+                        {
+                            "offset": 444,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        },
+                        {
+                            "offset": 924,
+                            "carAttributes": [
+                                "open",
+                                "tollRoad"
+                            ]
+                        },
+                        {
+                            "offset": 1767,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        }
+                    ],
+                    "transport": {
+                        "mode": "truck"
+                    },
+                    "tolls": [
+                        {
+                            "countryCode": "IDN",
+                            "tollSystemRef": 0,
+                            "tollSystem": "INDONESIA TOLL ROAD AUTHORITY",
+                            "tollSystems": [
+                                0
+                            ],
+                            "fares": [
+                                {
+                                    "id": "36bf5856-7cc0-4359-b9a0-d0d5c032a82a",
+                                    "name": "INDONESIA TOLL ROAD AUTHORITY",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 4500.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 4500.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "travelCard"
+                                    ]
+                                }
+                            ],
+                            "tollCollectionLocations": [
+                                {
+                                    "name": "Asemrowo",
+                                    "location": {
+                                        "lat": -7.24649,
+                                        "lng": 112.70961
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "countryCode": "IDN",
+                            "tollSystemRef": 0,
+                            "tollSystem": "INDONESIA TOLL ROAD AUTHORITY",
+                            "tollSystems": [
+                                0
+                            ],
+                            "fares": [
+                                {
+                                    "id": "0a11693e-a830-4e53-8b43-bae3b9f72763",
+                                    "name": "INDONESIA TOLL ROAD AUTHORITY",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 12500.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 12500.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "travelCard"
+                                    ]
+                                }
+                            ],
+                            "tollCollectionLocations": [
+                                {
+                                    "name": "Taman",
+                                    "location": {
+                                        "lat": -7.34147,
+                                        "lng": 112.71261
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "countryCode": "IDN",
+                            "tollSystemRef": 0,
+                            "tollSystem": "INDONESIA TOLL ROAD AUTHORITY",
+                            "tollSystems": [
+                                0
+                            ],
+                            "fares": [
+                                {
+                                    "id": "7bffd111-95b9-4ac0-bbb3-905318895ddc",
+                                    "name": "INDONESIA TOLL ROAD AUTHORITY",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 8500.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "IDR",
+                                        "value": 8500.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "travelCard"
+                                    ]
+                                }
+                            ],
+                            "tollCollectionLocations": [
+                                {
+                                    "name": "Sidoarjo",
+                                    "location": {
+                                        "lat": -7.44619,
+                                        "lng": 112.69913
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "tollSystems": [
+                        {
+                            "id": 7329,
+                            "name": "INDONESIA TOLL ROAD AUTHORITY"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

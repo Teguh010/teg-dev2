@@ -1,0 +1,60 @@
+oke jadi, begini saya mau menambahkan menu/ vitur show/hide menu atau apalah di halaman manager dan client. pertama kita akan coba terapkan dulu di halaman manager. tapi nanti harusnya akan ada efetct jug di halaman client, 
+tapi untuk pertama ini kita coba terakan dulu fitur / ui untuk memanage menu . jadi nanti manager / user tertentu bisa memanage menu apa yang perlu di tampilkan / di hide ke user / group tertentu.
+
+ini contoh apinya
+
+{
+    "jsonrpc": "2.0",
+    "method": "customer.available_gui_elements",
+    "id": "7d22961f-c598-4c0c-a4ce-2bf91f3ea71a",
+    "params": {
+        "customer_id": 4
+    }
+}
+ini reponsnnya
+{
+    "id": "7d22961f-c598-4c0c-a4ce-2bf91f3ea71a",
+    "jsonrpc": "2.0",
+    "result": "[{\"group_id\" : 2, \"name\" : \"administration\", \"enabled\" : true, \"report\" : [{\"id\" : 18, \"name\" : \"users\", \"default\" : \"enabled\", \"min_user\" : 4, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 16, \"name\" : \"workers\", \"default\" : \"enabled\", \"min_user\" : 2, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 17, \"name\" : \"workers groups\", \"default\" : \"enabled\", \"min_user\" : 2, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 19, \"name\" : \"users groups\", \"default\" : \"enabled\", \"min_user\" : 2, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 20, \"name\" : \"objects groups\", \"default\" : \"enabled\", \"min_user\" : 2, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true}]}, {\"group_id\" : 5, \"name\" : \"report\", \"enabled\" : true, \"report\" : [{\"id\" : 1, \"name\" : \"object overview\", \"default\" : \"enabled\", \"min_user\" : 4, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 2, \"name\" : \"trip stop\", \"default\" : \"enabled\", \"min_user\" : 4, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 3, \"name\" : \"toll cost\", \"default\" : \"enabled\", \"min_user\" : 4, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 4, \"name\" : \"valid raw messages\", \"default\" : \"enabled\", \"min_user\" : 4, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 5, \"name\" : \"input report\", \"default\" : \"enabled\", \"min_user\" : 4, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 6, \"name\" : \"fuel level report\", \"default\" : \"enabled\", \"min_user\" : 4, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 7, \"name\" : \"distance fuel engine hours\", \"default\" : \"enabled\", \"min_user\" : 4, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true}]}, {\"group_id\" : 4, \"name\" : \"tachograph\", \"enabled\" : true, \"report\" : [{\"id\" : 8, \"name\" : \"drivers\", \"default\" : \"enabled\", \"min_user\" : 2, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 9, \"name\" : \"vehicles\", \"default\" : \"enabled\", \"min_user\" : 2, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 10, \"name\" : \"files\", \"default\" : \"enabled\", \"min_user\" : 3, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 11, \"name\" : \"live states\", \"default\" : \"enabled\", \"min_user\" : 3, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 12, \"name\" : \"faults and events\", \"default\" : \"enabled\", \"min_user\" : 3, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 13, \"name\" : \"read statuses\", \"default\" : \"enabled\", \"min_user\" : 3, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 14, \"name\" : \"distance driven stats\", \"default\" : \"enabled\", \"min_user\" : 3, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true},{\"id\" : 15, \"name\" : \"driving stats by driver card data\", \"default\" : \"enabled\", \"min_user\" : 3, \"enabled\" : true, \"exception_set\" : false, \"visible\" : true}]}]"
+}
+
+ini 
+juga untuk customer list
+{
+    "jsonrpc": "2.0",
+    "method": "customer.list",
+    "id": "7d22961f-c598-4c0c-a4ce-2bf91f3ea71a"
+}
+{
+    "id": "7d22961f-c598-4c0c-a4ce-2bf91f3ea71a",
+    "jsonrpc": "2.0",
+    "result": "[{\"id\":4,\"name\":\"arveza\",\"email\":\"arveza.uab@gmail.com\",\"phone\":\"+37061483863\",\"contact_person\":\" \",\"suspended\":false,\"sms_balance\":null,\"public_id\":\"a525394d-d7ab-4c85-a7f5-c943608b39b2\",\"tacho_service_provider\":null,\"memo\":\"Nuo Vikredos\",\"groups_list\":\"\",\"system_users_public_id\":\"32920576-8518-4294-829d-a6ba2fdc972c\",\"registered_at\":\"2024-11-14T16:53:55\"}, \n {\"id\":7,\"name\":\"farema\",\"email\":\"\",\"phone\":\"+37060696654\",\"contact_person\":\"Vytautas Saugūnas\",\"suspended\":false,\"sms_balance\":null,\"public_id\":\"70d59014-f508-42bd-bda3-cf0baf484088\",\"tacho_service_provider\":null,\"memo\":\"\",\"groups_list\":\"\",\"system_users_public_id\":\"bbbdad4d-cfae-45f1-9262-09bc82c18511\",\"registered_at\":\"2025-08-22T16:09:26\"}, \n {\"id\":5,\"name\":\"KRISTENSEN TAXI DRIFT\",\"email\":\"\",\"phone\":\"\",\"contact_person\":\"\",\"suspended\":false,\"sms_balance\":null,\"public_id\":\"6cfbc6cc-469a-41a5-99f0-047894ab0553\",\"tacho_service_provider\":\"Tacho API\",\"memo\":\"\",\"groups_list\":\"\",\"system_users_public_id\":\"adc942d3-6126-4942-9546-df664d3baa6a\",\"registered_at\":\"2025-07-01T14:37:30\"}, \n {\"id\":6,\"name\":\"otf-anlegg\",\"email\":\"\",\"phone\":\"\",\"contact_person\":\"\",\"suspended\":false,\"sms_balance\":null,\"public_id\":\"a65ad0b5-7b52-4da5-842a-ec7fd8065e52\",\"tacho_service_provider\":\"Tacho API\",\"memo\":\"\",\"groups_list\":\"\",\"system_users_public_id\":\"69d85a6e-0de4-4e04-97a6-0620d50ebf86\",\"registered_at\":\"2025-07-01T16:47:20\"}, \n {\"id\":3,\"name\":\"test2\",\"email\":\"tadas@tracegrid.com\",\"phone\":\"+37067334080\",\"contact_person\":\"Tadas\",\"suspended\":false,\"sms_balance\":null,\"public_id\":\"fa746963-85c8-41a2-b2a4-b8070b7b4097\",\"tacho_service_provider\":\"Tacho API\",\"memo\":null,\"groups_list\":\"\",\"system_users_public_id\":\"7a771601-675a-438f-b0a0-f92236504b50\",\"registered_at\":\"2024-10-10T15:36:46\"}, \n {\"id\":1,\"name\":\"testas\",\"email\":\"tadas@tracegrid.com\",\"phone\":\"+37067334080\",\"contact_person\":\"Tadas\",\"suspended\":false,\"sms_balance\":null,\"public_id\":\"5a0b61fd-b6b6-4283-a772-f7f6dbb6c85c\",\"tacho_service_provider\":\"Tacho API\",\"memo\":\"\",\"groups_list\":\"\",\"system_users_public_id\":\"913edf17-c03e-467f-be52-a1f478ea5006\",\"registered_at\":\"2021-10-04T15:28:46\"}]"
+}
+
+ini juga
+
+customer.disable_gui_element(customer_id: Number, report_id: Object, report_group_id: Object) -> Boolean
+
+    disables a gui element (report) for a customer.
+    returns True on success, False on failure.
+
+    parameters:
+    - customer_id: int, required, customer id for which the gui element is to be disabled
+    - report_id: int, optional, report id of the gui element to be disabled
+    - report_group_id: int, optional, report group id of the gui elements to be disabled
+    either report_id or report_group_id must be provided
+    
+customer.enable_gui_element(customer_id: Number, report_id: Object, report_group_id: Object) -> Boolean
+Description: 
+    enables a gui element (report) for a customer.
+    returns True on success, False on failure.
+
+    parameters:
+    - customer_id: int, required, customer id for which the gui element is to be enabled
+    - report_id: int, optional, report id of the gui element to be enabled
+    - report_group_id: int, optional, report group id of the gui elements to be enabled
+    either report_id or report_group_id must be provided
+    
+faham?
+
+sebelum menerpakn kodenya saya ingin kita diskusi dulu seperti apa bentuknya di front end kira2. bisa?

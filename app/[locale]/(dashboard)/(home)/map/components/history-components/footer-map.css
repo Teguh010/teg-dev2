@@ -1,0 +1,63 @@
+/* FooterMap.css */
+@media only screen and (max-width: 900px) {
+  .first-column-history {
+    grid-column: span 8 / span 8;
+  }
+
+  .second-column-history, .third-column-history {
+    display: none;
+  }
+
+
+  .second-column-history.show, .third-column-history.show {
+    display: block;
+    grid-column: span 8 / span 8 !important;
+  }
+
+  .button-show-toggle-history {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1400px) {
+  .first-column-history {
+    grid-column: span 3 / span 3;
+  }
+
+  .second-column-history {
+    grid-column: span 5 / span 5;
+  }
+
+  .third-column-history {
+    display: none;
+  }
+
+  .third-column-history.show {
+    display: block;
+    grid-column: span 8 / span 8 !important;
+    margin-top: 1rem;
+    border-left: none !important;
+  }
+
+  .button-show-toggle-history {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1401px) {
+  .first-column-history {
+    grid-column: span 3 / span 3;
+  }
+
+  .second-column-history {
+    grid-column: span 5 / span 5;
+  }
+
+  .third-column-history {
+    display: none;
+  }
+
+  .button-show-toggle-history {
+    display: none;
+  }
+}

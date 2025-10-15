@@ -1,0 +1,121 @@
+{
+    "routes": [
+        {
+            "id": "336e9116-83b9-49bd-9e07-a45bbbc9a591",
+            "sections": [
+                {
+                    "id": "6ca1fe76-670d-4564-b519-686d2272f5de",
+                    "type": "vehicle",
+                    "departure": {
+                        "time": "2025-09-04T06:16:13+02:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 45.90312,
+                                "lng": 6.86044
+                            },
+                            "originalLocation": {
+                                "lat": 45.8997702,
+                                "lng": 6.8588207
+                            }
+                        }
+                    },
+                    "arrival": {
+                        "time": "2025-09-04T09:37:06+02:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 45.7957723,
+                                "lng": 6.9673114
+                            },
+                            "originalLocation": {
+                                "lat": 45.795771,
+                                "lng": 6.96735
+                            }
+                        }
+                    },
+                    "summary": {
+                        "duration": 12053,
+                        "length": 168443,
+                        "baseDuration": 11922,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 109.78
+                            }
+                        }
+                    },
+                    "travelSummary": {
+                        "duration": 12053,
+                        "length": 168443,
+                        "baseDuration": 11922,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 109.78
+                            }
+                        }
+                    },
+                    "polyline": "BG0p81qDk..",
+                    "spans": [
+                        {
+                            "offset": 0,
+                            "carAttributes": [
+                                "open"
+                            ],
+                            "noThroughRestrictions": [
+                                0
+                            ]
+                        },
+                        {
+                            "offset": 10,
+                            "carAttributes": [
+                                "open"
+                            ],
+                            "notices": [
+                                0
+                            ]
+                        },
+                        {
+                            "offset": 94,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        },
+                        {
+                            "offset": 3094,
+                            "carAttributes": [
+                                "open",
+                                "tollRoad"
+                            ]
+                        },
+                        {
+                            "offset": 3140,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        }
+                    ],
+                    "notices": [
+                        {
+                            "title": "Violated road that is blocked, due to a traffic incident, `avoid[areas]`, or `avoid[segments]`.",
+                            "code": "violatedBlockedRoad",
+                            "severity": "critical"
+                        }
+                    ],
+                    "transport": {
+                        "mode": "truck"
+                    },
+                    "noThroughRestrictions": [
+                        {
+                            "type": "restriction",
+                            "unconditional": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

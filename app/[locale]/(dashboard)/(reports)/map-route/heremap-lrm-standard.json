@@ -1,0 +1,187 @@
+{
+    "routes": [
+        {
+            "id": "8f691290-1efc-449c-b9ff-cd449efee918",
+            "sections": [
+                {
+                    "id": "6b5b743f-32c1-4eb4-8469-b3f33161a89f",
+                    "type": "vehicle",
+                    "departure": {
+                        "time": "2025-07-18T18:43:48+03:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 55.93784,
+                                "lng": 23.3169999
+                            },
+                            "originalLocation": {
+                                "lat": 55.9375715,
+                                "lng": 23.31731
+                            }
+                        }
+                    },
+                    "arrival": {
+                        "time": "2025-07-18T21:31:21+03:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 54.69621,
+                                "lng": 25.2674299
+                            },
+                            "originalLocation": {
+                                "lat": 54.6951115,
+                                "lng": 25.2698
+                            }
+                        }
+                    },
+                    "summary": {
+                        "duration": 10053,
+                        "length": 211672,
+                        "baseDuration": 9870,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 13.0
+                            }
+                        }
+                    },
+                    "travelSummary": {
+                        "duration": 10053,
+                        "length": 211672,
+                        "baseDuration": 9870,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 13.0
+                            }
+                        }
+                    },
+                    "polyline": "BGgzl2qDwglvsBgPoVwHzP8kBw0BsJ4NsY0jBsTkcoGsOoBoLwMwmDrJkDrE8B_O0FjI4DvMoGkIoa8GgUwCkI8GkX8G0ZwHsnB4D4c8B4SvC0U7GsY7GoV7GsTnGzF3SjSjNvM_OrOzP_O7GsTzFoLrE8GrE0FrEkD_E8B_EU_ETvHrEnG_EzjBriBnkBriB3SnQrY7Q_T_J_OrE3NvC7Q7BzKT3mBUnanBnkBTrY7BrETzK7B3cjI7GnBvM8BzK4D_J8G3IgKrJsO3S8kBrE4I3wB0kD7G4N7VgtBvCgFzKgUrE8GrE0FrE4D_EwC_EA_EnBzFjDzFrEn4BnzBrY7VzF_EnfzenQvRzK7Lnajc_JopBzFokBjDgZrE0jB_EgtBvH0hCvCwWrEwlBjDge7BwR3D0enB0KjIoxCjDwlBnB0PvCsdnB0PjDgjBnBoQTwHvCwbrEgyB7BgU7B4SzF8iCzF4kCvCsdvCgZvCkcrE41BzFoiCnB0PvCsdvC0ejDkmBzF0mCnGgmC_EsgC7BsYjDopB7BgZ7BkX7BoVjDokBnBkNnBgUT4XTgjBUkmBUsJoB8VoB8VUo9BnB8kBTwRTwbT4NnB0eTsOToVnBwWnBkhBToQnBkrBnBsdjDk_BjDoL7B4SjDgyBvCg3B7BssBTsOrE0rC3D8xCvCgyBT0UT0UnBoVrEs-CrEs0CnBwW7BouB7B8kB_J0iJzFo8ETgZnBs2B7BwRTwvBnBkIAkI7B4kCvCslC7G8kGnBkS7BsiB_E4zC7BgjBrEgjBjDsdzK0rCjN0rCvHokB3SosCnL8pBzU4_BjX0hC_EkNjIoQnag3BrTkrB_iB4_B7GoL_YwlB3N4SzewqB7a8f_d8fzKoLnLwMvqB0tBnqDsyD3c8fj6B0hCvqBozBr7BgwCnzB8nC7kBo4Bvb8uB7uB44C7fg8Bnak1BzpDsvHv9EozLz3B4qEvbwtCrT08B_TgmCnVkuCvRkpC3N0mCrEwbrJk6BnGokBvH41BjDge7B0P_E0oB3D8zBzFgwCjD8iC7BwoCvCo1F7B4pCrEolDrEg6CvCw0BjD8pB3D8kBvRooEvb0xEvM46B_JkrBjN4wB_T8iC_Os2BzKkhBnfg1CrsBksD_d0hC_dw0BrTkmBnLoVna4rBrdkrBriB0tB7awlB7VoazegjBjhBsiB_OoQ3NwMnakX_nBwgB_iBwb7QoL3mBkXjS4I_sB8Vz3B8av1Do4BvgB0P3SsJ_JsEzKsE3SwH3rB4S77C4mBv5BoavbwMzrCgjBnlDssB_iBgPvWgKnVgK3X0K7VsJnLgF_YoLnkBoQ7QkI3ckN3zMo1F_1E8iCz1C4rBzZ0PrxB8f7zBkmBz1C8iCj_B0yBjpRw6NzmCo4BrnB8f_gCk1Bn4B8pB_JkI_iBsYvM8LnzBgoBv8C4pC7QkNr0C0hC77C0rCr7B8zBv5B41BvRkSrY4cze4mB7LoQrJwMnGoGnagjBnLwMnBAzF4DrE8G7B0FToLjmBghC3rBkpC_d8zBr-Ck-EzhC0uDnQkczPoajS0e_gCksDrOgZvHwM74BogD7V8kBzUgjBjIkN3IgPzKkSvHkN3S8fvW8kBztB8sCjIsO7G8L79BknD3NkXnLsTzUsiBz8B8lD3cgyBzjBs7B3IsO7QkcvlBk_B7VwlB3iDglF_nB8iCrY8pBrT8frEwH_O4XjNwWnVokB_iBs7BjN8VjrBonCrYopBjIsOjSgernB8iCrJ0P7GoL3IgPjI4N3ckwB3hBo4BnagtB79B4nD_J8Q3N4XvvBgwC_gCguD7LgU_T8fzZgtB_JoQn9BknDnLsTnGgKjwB0wCvlBk_BzZwqBnQwbnQoazP0ZnQoa_d03B7BwHzZwqB_EkI_d0yBvjCkxDr5Cs1E7VwlB3IsOnLsTnL4S3D0FjD0FnGgK_E4IvCsE_TwgBvMoVzUsiB3mB0hCn4Bs-C_J8Q_gC4sDnQwb3NwWrEsJzKoQjrBwoCr7B0kD7GoL3IsO3NkXnV4mBzU4rB3Xo4BjrBgpD_E8L7LwbjDwH7GoQvM0e7GoQ7G8Q_J4XzKsY3SkrBnVgyB72C4mG_doiCjXouBnLgU_EgK3SgjBnGwMrJwRrO0e_Joa3DkN3D0PjDwRzF8uB3DghCrEksD7BkmBnBsTvC8anBwMvHw5B_T45E_EkmBzU45EzKwjC_EwbrJ4mBzF0U_E8QjSw0BrOgjBjNwb3N0ZrYsnBnf4rBvqBo4B_JwM7Q8VnsCgkD7G4I7f8pBn9BgwCj_BkzC3SoajI0K3DgF_OkXnkBk_B_gCo0D7QwgBjIoQvH8Q7L8fvHkXzF0UzK8pBjI8pBnG4rBrEs2BTsxBoBk6BoLwvG8Gs3DwH0uD4Sw7F8LklE8G49CgFs-C8B8uBsE84GwCsmE8BsjDgFo-I8BgkDUwqBA41BTgeTopBTgeToQ7B41B7BwvB3DoiC3D46B7Go2C7Lw1DnQ8jE7f0mHniCoyO7kB0uIv3C8yTjSkvE3DwlBzFsxB7G0rCvHguD7B0ZrOw-GvC4mBnBgZ3Iw_DrEoiCrJ4vE7QsoIrYkrLjDsxBjD8uB7G8qDrEonCrEo9BnBkSTkNnL0qFzFg1CjDkwB7BkhBT4NvCkmBnBkXnB0PT4I7BsYnBwWvCkmBjDgtB7B0e3NgyGvC8kBnQ49H7B8fnLskFT8L_Eg3B_JoxCzK89B_EgZ7L8zBvWkzCjIwb3jFsxQzPgyBrO0tBv_Dk4MrsBgxE_J8fnQs2BnL0oBrOozB3Ns2B_iBwuEjSwyC3I8uB7LgmC3Io9BrEsnBrEopB3DsnBvCsdvCsnBvCgyBT0eU0wCU4XoB0Z8B0jB4Dw-B4Ig6C8Lg6C0FsnBsJ41BsOgmC0tBozGsYwwDwbo-D0oB48FsJkrB8Lo4B8VgkDwvBs7GgmCw9JgUs-CwC4NsJkwB4I41BkD0U4Dge0FouBkDsdwCoV8BoVwCwWwM09DgFkrBkc8qI4cwwIkIslC0KsqCsO82CwM0hCoLw0BoQ4kCoV0wCwvBsuFwMouB0KkmB0Z44C4_B0mH8G4Xs0CgxJ4NozBkSwoC4IokBgPslCwHgoBkDgPsOg1C8V8yE0tBswJwlBk9HsJwjC08Bk9MsT0xE0Ks0C8QkgEwM8gD0Pw_D8GgyBwHs7B4_Bw2PwH8zBgKs7BgFgZ0F8asOw5B0Pg3BsJkcoVs7BsO0jBg8B4vE8G0PsJ8VsTouB8uBguD4SkwBwHoVgP0tBkNgtB0Pw-B4NkkCoLkpC4IsqC8L8-DwH89BwHsxB0Ko4BsOk_B8Q08B8LwlB0Us7BgtBguDgjB0wC8Lwb8Lwb8ak_BgFoL8QgoB0UwvBssBsoDk6B0nEsTgtB0F4NkNofk1Bg9DsYsgCwHwW4I8agPozBsOo4B0F0Z0F4c0Kk_BsJwjCgFwqB4Sk-EwgBgiJwRg2E8pB84LsOw1DgK0mC4Ig3BwMwjCsO0mC8Vs-C4N8zB4X8xCgrC0wHkkC41GwgB8gDgtBw_D0kD8vIsEkNoV46B4So4B8GgZ0KgtB4Ik1BwCoV8BoVoBgUoBgUAgeAoQnBsd3Do4BzF8pB_EkcnQosCrTg1CvgBs1E_O8iCrEsT7L03BrE4S7G8fjD4NrT01CvHwgBzF8VzF8VjDoLzFsTrTo9B_JsdrOkmB7G4S3SkrB7QwlB7Q4hBnVwlBnkB08BjckrBvWgjB7Q8avWsiB3NoVr4Fo-I79Bs-Cz6C4qEj9C8tEj_B8gD7aopB3S4cv0B0wCnuGs6JjX0jBvWsiB3hG8oJ3c4rB3mBs7B7uB8nCvlG8tJ_J0PzjB03BjSwb_jDg7EjmB0hC7VgoBnV8pBrnBs0CnV4wB7Vs2BnQkrBrT03BnV0hC_O4wBnLopB7G4X7LwvBrOo9B_Tw8C3NoiCzKg3BvW8vDz3BgzIzKs2BrJouBnkBg0Fr-C02Onag9DzU8qDjX4xD3_Bk-JztBsgH_T8gD7Lw5B_E4XnGof3N8iCjS44C7L46Bze02E3hBwiFrJssBjkCskKnVwmDjIkmBnLw0BjNsgCnLw0B_2BsjI7L03B_EsYnG0e_Y42D7Lk6BvlB8wFzFwb3DkS3hB4-EjrBssGjDgPvHsiB36BgzInVsjDj1Bw3Hv3C4zMna04D7L03BvMo4BzPkpCnQ4pCzP0mCvH4hBnG4c_J8uBrJ8uB7L0yB_E4XvHwgBrJ0tBnuBw0G_qCw2KjsDsuP3c0iE7ao5DzZw1DrxB0hHzKo4B_E8anLwoC3IoiC_E8uB_E08B_Ek4CnB0oBnBw1DAkIA4tFUstIAkpCA4rBAgZAgyBAsTAwRAgjBUoVA8VA0eAkwBT4pCTwqBTwR7B0tBnG06C3DkrBzF8zBjIkkCnQw1DjDoa_E84B7BgeTofT8zBT4hBTk_BT89BA0jBnBstDTw5BA4InB4hGoB0kD4Do7CkDo4BwH80DkD0oBoB8akDk_BAw0BT0eTgeT0U7BsnB7B8kB7B8V7BkXvHoxC3D4mBvCkc7BwbnB8LTsJ_EsO7B4I7Qg_CzKw0B3IokB3IgenG4S3NkhBvR8f7V0jB7VkXvgBgU_J0F7LgFnawHjS8BvRA7LnB_EnB3hBrO3DA7LzFrOvHjXvMrEzF3DvC7VnL34CztBzZvMjX7L_hE7iC_gCvgBvgB_O7V3I36BjX39C3czUrEvR_EvbnG_iB_EzjBvC7QnBzUnBrOnBvbA_JAzZnBzoBkD_JU3mBwCjwB8GnagFzrC8QrsBkN3kC8VnpVg3G3pC4X3lE8pB7uBwRrY0KzUgKnVoL3SoLrT8L7VsO7Q8LriBwb7QkN_OwMvb0Z7GwH3I4IzP8QjIoGzK0KvCnBjDAvCUvC8B7B8BvCoGTgKzK0PjSsYrOkSnQwWzZokBjhB0yB3mB89BztBsvC_iBsgCzZsxB7uB4iDnuB4nD_xB04DnL0Zj1BkvE3S8zBzoBk7DrT89BvWosCrJ4c3wBk8FvWs-CriBggF_TwrDz4Ds7VvbohFrxB8vIjco3E_iBgqFjcwkEvMwjC_EoVjDoGjDsJvHwgB7B8L_E0FvC8GnBsJUkIwC0F_EwW3I0erOkwB7LgtB3hB8-D3Xg1CrsB02EjS46BjhBoqD7zBg7Ev5BgqFjNsnB7LsiBjI0Unf8xCvgBg1CrJ0Z_sBsyD_lCg0F7akkCrT4rB_TsxBzZsqC7iC0lFnGgPrJkX3SouBzPkmBnf4pCnuB4nD3mBo2CnkBkuC3wBolDzyBwhDvqBwtCj6BgkD_OgZzjBo4B7pBw-BjmBk1BniC01C_iBwqB7pBkwB3_B4kC7zB8zBz8Bw5BzwC0mCnpB4hBrvCw-B31B0oBjkCsxB_yDoxCz8L8lIj5E0pDv5B4mBnoEg_Cr7BgoBz2EsoDjc0Ur2B8pB7sCw-Bz6C0wCzyBwvB7xC4zC79BwjCjhBwlBzyBs7BjrBk1BjrB03BzyBwjC7Vge_7B01CzK8Qv0BoxCvH8LjSsd3Sge7Qkc7LgUjmB0hCv0Bk9C_JkSv0BolD__E88J7uB82CrxB82C3XgoBv0B01CvbkrBzhC4iDvgB8uBj6BsvCzhC01CnpBw0BjNoQvjC4uC7uB8zBnuBkwB_0Cs0C3sIwmIn2C4zC_qMw-LzqFwnFvqB4rBzoBssB7uBk1BrxBk6B79B8sC7fopB36BgwC_iBgyBztB8iC31B8xCjmBo9B_sBgrCnpBwoC3_B80D79Bo5Dz3Bo0DjmBs0C3oK4gYzmM0zcjuCo1Fj1BsyDnkBsqC_JgU7kBkpCvR4hBjc8zB_OwbjIgP3mB8iCztB8sC74B06CnnM85SnmF8gI_nB89B_douB3X8kB3XokBna0oB3SgevHwMvlB89Br7BknDrlC8-D36B80D36Bs8DvvBoqDr7BotEvW84BzZkkCvvBojEn4B8mFnpBg9D_dk9CrgCkhG79B0-FriBsoDnuBotErJ4c_JsdzP8uBvHwW_Jof7V0hC7f8gD_pFwgQjmB4sDnVw5Bz3B8tEnpB4iDj1Bk2D3zCszFn4B0uDr2BsjD7zBo7C_nBwjC7uBsqCnuBonCjmBs2B7zB8nCzhCk4C3hBssBn2C0pD7iC0rCvqB0tBzyB8zBz8Bg8B_dofz8Bo9B7kB4mBzP0P7VwWjS4SvRkSnV8V3rB4rB7fofzyL46Lnakc3sDg4Dn4B4_BvjCsvCvjCoxC3gE4jF3gJwvLrxGgpIzmH4lJ7iCg1C_lC44CnzB0hCjrBg3B7zB0hC_rE8wFz3BghCvyC87CjkC0mCjpCgmC36Bk1B7fwbriB4c31BkrB_7BssBjwBsiBjrBsdjwB0e7uBkcvb0P3_BsiB3kCsiB_O8Gj4CwlBriB4Nz3BsTzZkI3NsEnnRkoFn8EouB79BgU_gC4XvjCwb_-CkrBnkB4Sz_Cw0B_7B8kB_5Cg8Br2BsnBrnBgejrBsiB36B4wBzjB0ernBokB7iC4_BvlBkmBnuB4wBvjCsqCrgCgrCzuDojE3kC0wCzoBouBvqBwvBv-BghCztBssBnkBkhBjcsYjmBof_lC41B3mBwb7iCkrB_7BsiBzyBoar7Bwb36BsYn2C0e72H0wCrYkI3XwH7kB8L7lDwgBvR0FrOsEnG8B7asJnkB8L3uC0Z_0Cwb3SoG_5CsdzrC8avoCsdvoCkhB7uBgZniCgoBj1BokB3rBkhBvMsJjmBofrd0Zj1BgyB31Bk1BjwBw0B36BslC3rBo4BjXofrgC87C74Bg1C7nC8vDn5Swpd_uK8pQzwCk7DjSoan4BsvC_xB8iCrgCoxC7kBssB7pB4wBn4B4_BjmB0oBjrBssB3zC0wCjpCoiCz8B0yBn9BkwBrgCkwBrlCwvBnf0UzjB8V3rB0Zj4CkwB3hGgkDj_BwgB7uGwrDvyC4rBzyB4cj6BgjB7LwH_lCouBj_BssB3rBkhBjmBgejkCw5B7zB0tBj6Bs2Bnf0e_nBgoBvgB4hB79BwjCr1Os2Q_YkczK8L_gCkpCzK8LnL8LvqB8uB_5C0pD7VgZntE0gFn7C8lDzyBk1Bze0ezege_xB8uBrY8Vj1BouB_xB8pBnsC46BrTsO3mBwb3NsJ7zBsiBv0BwgBzKoGrd0P3wBkcrYkNnxC8pBnqNsxG_-CouBvzEwoCrxGknD_4KspFrsGgkDnzBkX_nBgUrsBsYjkC8fzFkDrE8BrdwM_iBgPjckNvlBgP_J4D3hBgPrY4IzmCgZ79BwWjrB0PrnQ00F32DopB_Y4I3hBoLnQgFnsCoavWwHnVwHvqBgPn4BgUzyBwRvqBsOvgB0KzwC4cj1B4S3XkI7lDofzjB4I74BwMjXgFjhBoG3rB8G7uBgFrToBvvBAryD_ErY7Bv0BnGzhCzKzwCnQn4B_OnfrJ7uBnQvlBrO7kBrO3rBjSrOnGjhBrOzPjI_5C_iBrYrJv5B_TvRzFjcjIrqC3SvqBrJjmBvHzerEzUvC3wB_ErsBvCzyBnBnzBoBr7BkDzhCwHr8DgPjuC8GrgCkDnfAjmBnBv-B3Dv0BnGzrCvMzU3DjzCzU7gD7anpBnLjtPznE7LjDr-H3kCjxDze3nDzZnuB_JzU3DzrCzK7VvCvvB3D7VnBv5BnBr7B8B3SoBzhC0F3XkD7f8BvlBwH_5C8V_TgFrnB0Kvb4I3hB8LnkBkN7iCwbjpC8frlRk4HjgJ4gE3xDk1BzxE0hC7oE4_Br0CkrB31Bsdj6BwgBz1C0yBrwO4lJvoRk8KjhL4_GnjE8xC3XgPzyB8f7yE87CzwCgyBzK8G31BsiBjckS3XgPz3BsiB7GsE_JoG3cwR3zCw0B3uRs9K75D0rC_YoQrxBge3oK0tGrxBge_iBwWjkC4wBjrBkhB_nBgenzB8pBrgCg8B7pBwqBriBsiB_gC4kCvqB4wBr2B0hCvbsiB3cwlBjcwlBv0BosC3N8Vz_CooErgCk4C7f0oBjhB0oB7zB08B31Bs7B3c0e3XgZ7uBouB_sBopB3wB8pBnkBsdvR4NrT0PvvBokBztB8fzF4DnG4D3N4IrnBgZ_TwMvb0P74BgejwBgZ3sDs2B3mBsTv0B0Z39CouBrxBsYjIsErEwC7xCopBzKgF7Q4InVwM79B0ej2Dw-B_0C4rBjmG0_CnkGogDnlDsxBngD4rB72CwlBzrCgez_Hk9Cj0Eg3B3gEwvBruF0hCvjCwb7gDkwBzkDw0B_nB8V7f4Sv0B4hBzzDoxCvhD0mCn9B4rB7GgFna4SzKwHnLkI3DwCrqCk1BvH0FjiDgmCngIs4Fnf8V7QwMv3Ck_B3NgKzFsE7akS_7BkrBzvFw_DngDoiCrd0UrOgKjiDslCnLkIjI0F3I8GzhCgyBroIkrG_vCg8Bv7FgxEr0C0hC33FsrE7GgF_Y4S_0Hs9FjpC03B36B8uB34C8nC_tDs-Cj_Bs2BrrEgiEjrBopB7kB8kBjpCgmCnuB8pB31BsxBzhC84BnlD4zC_JwHjSsOzZ0UjgE4iDzKkI7L4I_Y4SnqNw9JnxC08B_kFs8DjnDsvCv-B0yB_2BouB7gD4zC7tEojEjrB8pBrhEgiE_sBgtB_d0e7a8a3D4D_gC0hC7LwMna0Z_YsY3wBozBjpCsqC_yX85XzjGokG3sDovDjiDolDjuCs0C3hBsnBz6C0uD_iBgtBvgBssBjmB8zBjwB8iC_xBgrCvvBgrCvvBkuC_nB4kCjhB46B_sBg1CjN0Z_2BstDriBonC_EwM_EoLztBgkDvMwbjmBs5Cze0rC3csqC3ckuCztB4gEjuC0rHj2D4mL7akuCvqB80D3rB8vDnkBg6C3zC4hG_gCsrEnnCotE3X0tBjcw0Br7BoqDvlB4_B_nB0hC36B87C3S8a3tFg_HzmCsjDrdsnBj_B82CrxB4_BvbsiB_5Cw1DjX4cj_BosC37DoyEzjB0oBvtHknIvgBgjB79B89B_qC0rCzuD0pD7zBsxBzPsOr3DstD72CoxC7kBwgB7asY3XoVr2BgyB3kCw-Bz2E4qErrE8-DvyCkuCnzBozB3kCkpC_iBkmB7zB08BjrBw0BvqB41B3zCkxDjhBouBnf0tBnfwvB_yD05FnuB4uC_T0jBvRkhB_nBsqC31B4nD_2B0kDnkBw-B74Bg6C3hBgyBjc0tBzP4XvgB0tBzyBghCjkC8xCzoBouB36BghC_iB8kB7kB8kB7kB0jB3mB0jBrgCw5BjlEw6D_jDw8Cn2CwyC_iBsiB_iBokBjrB8uB7LkN_xBw5BjmBouB_gC8xC_qC0kD_Tsd7pBg8BvlBg3BjcssBjrB0hCjXokBjcwqBzFsJ_qCgzD34H89LvlGwuJn-Dk3F_nBw0Br-Co0DrgC4pC7iCsqCzewgB3uC4uC_lCwjCrnBkmBvMwMzoBgoB7L8LnpBopB7iCo9Brdkc31Bw0B3pConC7LwMnkGg-Fnfge_JgK7qDgpD_JgK_dofjNkN_qC0rCr8Dg9D7pBkrBvbwb3XsY3rBssBnLoLjuC4uCzhCkkCzqF4tFrTgUvmDwmD7lIwhIj8FkyF31GssG_7B84Bz6Co2CnxCsvC7fofvMoLnLoLjzC4zCnLwMrJsJ3mBsnB3mBgoB_2B08BnQ8QjhB8f7GkIjcwbvboanL0K7VgU_YsYjS4SnpBouB7QkS7uBk1B3mBwvBvlBwvB_dkmB74BgmCrO8Q3S4X_nBouB74Bk_B3N0PrnB4rBvgB0jBvlB8pBjN4N_JoLvlB8pBjXoarO0P7VsYrJgKrdofnQwRjXkXjN0K_dgU3_B4rBnQ4NrO0P7L4SjIsOvM8a3N8fjN4XnVgZ7L8L7GwH3wB41B3NgPnkBwqBrO8QjN8Q7V8a_JkNvRkXjN4S3XkhBvMsT_O8VvMwRna8kBzK0P_YgjB3IkNzUsd7agoB_O0UjNoV_OwWjSkcrJkN7awlB_JsOzK0PjSsYvM4SjSsYzUoanawgB_7B0mC_nBwqBrYgZ_sB4rBvW8V7L8LvWwWvRkSvMkN3SkSjSkSzK0KrJ4InLgKrOoL7GoGnLgK_dgZnL4IrYwR_E4D_J8GrOgKvHgFzZ4SzPkNjrB8ajNwHrsB8a7LwH_sBgZjNwH7fkS7VkN3mB0UnV8LnQgKrOkIjcoQrToLjSgK_JgFrO4IvHoGrE8GzPgKnLoGzK8GvMwHvR0K7L8GvboQrOkIjS0KnGnBvlBgP7V4I_T0KzZ4NjIgFjNkIzjBoVjS0Krd8Q3I0FnaoQze4SzjBwWrEwCvRoL7QoL_T4Nze4X_T8QjS0P3c0Z_iBkhBjN4N3S4S7G8G_YgZ3hB0ejIkNrTsT79Bw-B_oDsoD_JgKrTsTnf8fjN4N_TgUrO8L7L0KnLwM3IoLzFsJrO0evHsTzPgyBvH8f3I8kBvHwb_J8fnGoQjIwRrEgFjI8LrE0FzFwH_E0FnLkIvMoGjIwCvHoBnVzF_T3DrO7BjXTrOArJ7B_J_E7LjIrJvHrJ3D_ET3DUnG8BvHgFzFoGzFsJzFgP7BkI7BoVU0KoB0KsE8Q0F8LsEoG4D4DsE4IsE4IwC8G8BkI8BgPA4I7BgUjDwb3DofvCwW3DwgBrJzF_YvC_E7B_d4DjcwCvWgF_EoBUnQ",
+                    "transport": {
+                        "mode": "truck"
+                    },
+                    "tolls": [
+                        {
+                            "countryCode": "LTU",
+                            "tollSystemRef": 0,
+                            "tollSystem": "VIGNETTE LAKD",
+                            "tollSystems": [
+                                0
+                            ],
+                            "fares": [
+                                {
+                                    "id": "c062ef0c-0704-43d9-ba72-c47cbb5477c2",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 13.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 13.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 1
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "821eaf83-9b42-4177-8c4c-e99170c6f2fa",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 41.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 41.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 7
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "03f54fb2-852f-4cc2-99dd-70a4a0cfe7c5",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 83.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 83.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 30
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "ba52e7a5-08a7-41ff-a4e6-9b90c7894f44",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 828.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 828.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 365
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "tollSystems": [
+                        {
+                            "id": 7558,
+                            "name": "VIGNETTE LAKD"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

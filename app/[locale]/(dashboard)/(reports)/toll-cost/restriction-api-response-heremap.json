@@ -1,0 +1,334 @@
+{
+    "routes": [
+        {
+            "id": "5b0f386b-9591-4f94-95c3-e1819839664f",
+            "sections": [
+                {
+                    "id": "d388a218-63b5-4add-9dd0-69a1bda7ae38",
+                    "type": "vehicle",
+                    "departure": {
+                        "time": "2025-09-04T05:58:04+03:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 55.9330823,
+                                "lng": 23.3173143
+                            },
+                            "originalLocation": {
+                                "lat": 55.93308,
+                                "lng": 23.31731
+                            }
+                        }
+                    },
+                    "arrival": {
+                        "time": "2025-09-04T06:05:29+03:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 55.9253051,
+                                "lng": 23.3325106
+                            },
+                            "originalLocation": {
+                                "lat": 55.9251101,
+                                "lng": 23.3324823
+                            }
+                        }
+                    },
+                    "summary": {
+                        "duration": 445,
+                        "length": 2450,
+                        "baseDuration": 440,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 0.0
+                            }
+                        }
+                    },
+                    "travelSummary": {
+                        "duration": 445,
+                        "length": 2450,
+                        "baseDuration": 440,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 0.0
+                            }
+                        }
+                    },
+                    "polyline": "BG0p81qDk..",
+                    "spans": [
+                        {
+                            "offset": 0,
+                            "carAttributes": [
+                                "open"
+                            ],
+                            "notices": [
+                                0
+                            ]
+                        },
+                        {
+                            "offset": 3,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        },
+                        {
+                            "offset": 33,
+                            "carAttributes": [
+                                "open"
+                            ],
+                            "noThroughRestrictions": [
+                                0
+                            ]
+                        },
+                        {
+                            "offset": 53,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        }
+                    ],
+                    "notices": [
+                        {
+                            "title": "Violated vehicle restriction.",
+                            "code": "violatedVehicleRestriction",
+                            "severity": "critical",
+                            "details": [
+                                {
+                                    "type": "violatedTransportMode",
+                                    "cause": "Violated access restriction for this type of vehicle"
+                                }
+                            ]
+                        }
+                    ],
+                    "transport": {
+                        "mode": "truck"
+                    },
+                    "noThroughRestrictions": [
+                        {
+                            "type": "restriction",
+                            "timeDependent": true,
+                            "restrictedTimes": "+(h0){h8}(h20){h4}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5f1bd8b8-52cb-47d9-b471-47b328836d0d",
+            "sections": [
+                {
+                    "id": "aec72d92-8a82-4e9a-968d-782d9db28eb7",
+                    "type": "vehicle",
+                    "departure": {
+                        "time": "2025-09-04T05:58:04+03:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 55.9330823,
+                                "lng": 23.3173143
+                            },
+                            "originalLocation": {
+                                "lat": 55.93308,
+                                "lng": 23.31731
+                            }
+                        }
+                    },
+                    "arrival": {
+                        "time": "2025-09-04T06:17:20+03:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 55.9253051,
+                                "lng": 23.3325106
+                            },
+                            "originalLocation": {
+                                "lat": 55.9251101,
+                                "lng": 23.3324823
+                            }
+                        }
+                    },
+                    "summary": {
+                        "duration": 1156,
+                        "length": 12361,
+                        "baseDuration": 1109,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 13.0
+                            }
+                        }
+                    },
+                    "travelSummary": {
+                        "duration": 1156,
+                        "length": 12361,
+                        "baseDuration": 1109,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 13.0
+                            }
+                        }
+                    },
+                    "polyline": "BG0p81qDk..",
+                    "spans": [
+                        {
+                            "offset": 0,
+                            "carAttributes": [
+                                "open"
+                            ],
+                            "notices": [
+                                0
+                            ]
+                        },
+                        {
+                            "offset": 3,
+                            "carAttributes": [
+                                "open"
+                            ]
+                        }
+                    ],
+                    "notices": [
+                        {
+                            "title": "Violated vehicle restriction.",
+                            "code": "violatedVehicleRestriction",
+                            "severity": "critical",
+                            "details": [
+                                {
+                                    "type": "violatedTransportMode",
+                                    "cause": "Violated access restriction for this type of vehicle"
+                                }
+                            ]
+                        }
+                    ],
+                    "transport": {
+                        "mode": "truck"
+                    },
+                    "tolls": [
+                        {
+                            "countryCode": "LTU",
+                            "tollSystemRef": 0,
+                            "tollSystem": "VIGNETTE LAKD",
+                            "tollSystems": [
+                                0
+                            ],
+                            "fares": [
+                                {
+                                    "id": "a8e71259-621c-4b7b-9d72-064c2e99a2d0",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 13.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 13.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 1
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "276de521-ef7f-4966-855f-7bdab1125c88",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 31.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 31.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 7
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "3d0021ce-15d7-4204-b7d7-c7c76b6652f9",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 62.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 62.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 30
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "56094810-ebd8-4f1a-a581-db212d4149d0",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 660.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 660.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 365
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "tollSystems": [
+                        {
+                            "id": 7558,
+                            "name": "VIGNETTE LAKD"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

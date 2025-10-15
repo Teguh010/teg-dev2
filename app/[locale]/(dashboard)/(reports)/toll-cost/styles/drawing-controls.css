@@ -1,0 +1,84 @@
+/* Drawing Controls Styles */
+#here-geoshape-controls {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+#here-geoshape-controls button {
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+#here-geoshape-controls button:hover {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: scale(1.05);
+}
+
+#here-geoshape-controls button:active {
+  transform: scale(0.95);
+}
+
+#here-geoshape-controls button.here-draw-active {
+  background-color: #d1d5db !important;
+  border-color: #6b7280;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  #here-geoshape-controls {
+    bottom: 200px !important;
+    right: 24px !important;
+    gap: 0;
+  }
+  
+  #here-geoshape-controls button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  #here-geoshape-controls button:active {
+    background-color: rgba(59, 130, 246, 0.2) !important;
+  }
+}
+
+/* Delete button styles */
+.here-delete-shape-btn {
+  transition: all 0.2s ease;
+}
+
+.here-delete-shape-btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.here-delete-shape-btn:active {
+  transform: scale(0.95);
+}
+
+/* Mobile delete button */
+@media (max-width: 768px) {
+  .here-delete-shape-btn {
+    width: 32px !important;
+    height: 32px !important;
+    min-height: 32px;
+    min-width: 32px;
+  }
+  
+  .here-delete-shape-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+/* Touch-friendly spacing for mobile */
+@media (hover: none) and (pointer: coarse) {
+  #here-geoshape-controls button {
+    margin: 2px 0;
+  }
+  
+  .here-delete-shape-btn {
+    margin: 4px;
+  }
+}

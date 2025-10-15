@@ -1,0 +1,27 @@
+[build]
+  command = "npm install && npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+
+[functions]
+  directory = "netlify/functions"
+  included_files = ["netlify/functions/**"]
+  node_bundler = "esbuild"
+
+  [functions.timeout]
+  default = 30
+
+[dev]
+  framework = "next"
+  targetPort = 3000
+  port = 8888
+  publish = ".next"
+  functions = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NEXT_USE_NETLIFY_EDGE = "true"
+  NODE_VERSION = "18.20.5"
+  NPM_VERSION = "9.9.4" 

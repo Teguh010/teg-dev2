@@ -1,0 +1,200 @@
+{
+    "routes": [
+        {
+            "id": "4b9ccf84-7287-4102-926a-5f6768021435",
+            "sections": [
+                {
+                    "id": "56111e6a-603c-4bd8-856e-e403d565cd34",
+                    "type": "vehicle",
+                    "departure": {
+                        "time": "2025-07-19T06:41:19+03:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 55.9330823,
+                                "lng": 23.3173143
+                            },
+                            "originalLocation": {
+                                "lat": 55.93308,
+                                "lng": 23.31731
+                            }
+                        }
+                    },
+                    "arrival": {
+                        "time": "2025-07-19T09:27:57+03:00",
+                        "place": {
+                            "type": "place",
+                            "location": {
+                                "lat": 54.6906196,
+                                "lng": 25.269801
+                            },
+                            "originalLocation": {
+                                "lat": 54.6906199,
+                                "lng": 25.2698
+                            }
+                        }
+                    },
+                    "summary": {
+                        "duration": 9998,
+                        "length": 212221,
+                        "baseDuration": 9909,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 13.0
+                            }
+                        }
+                    },
+                    "travelSummary": {
+                        "duration": 9998,
+                        "length": 212221,
+                        "baseDuration": 9909,
+                        "tolls": {
+                            "total": {
+                                "type": "value",
+                                "currency": "EUR",
+                                "value": 13.0
+                            }
+                        }
+                    },
+                    "polyline": "BG0p81qDk0lv..",
+                    "notices": [
+                        {
+                            "title": "Violated vehicle restriction.",
+                            "code": "violatedVehicleRestriction",
+                            "severity": "critical",
+                            "details": [
+                                {
+                                    "type": "violatedTransportMode",
+                                    "cause": "Violated access restriction for this type of vehicle"
+                                }
+                            ]
+                        }
+                    ],
+                    "transport": {
+                        "mode": "truck"
+                    },
+                    "tolls": [
+                        {
+                            "countryCode": "LTU",
+                            "tollSystemRef": 0,
+                            "tollSystem": "VIGNETTE LAKD",
+                            "tollSystems": [
+                                0
+                            ],
+                            "fares": [
+                                {
+                                    "id": "b3d096bd-0a39-42c5-b181-4dad5d8a4cf7",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 13.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 13.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 1
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "4b08ee47-eeaa-4388-adf8-f03dc97ed184",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 41.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 41.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 7
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "663a7e4d-3c2d-4acf-8960-d5e1eb5a6002",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 83.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 83.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 30
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "634227f7-3be1-490d-a7d3-a98f4de03f2e",
+                                    "name": "VIGNETTE LAKD",
+                                    "price": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 828.0
+                                    },
+                                    "convertedPrice": {
+                                        "type": "value",
+                                        "currency": "EUR",
+                                        "value": 828.0
+                                    },
+                                    "reason": "toll",
+                                    "paymentMethods": [
+                                        "passSubscription"
+                                    ],
+                                    "pass": {
+                                        "returnJourney": false,
+                                        "validityPeriod": {
+                                            "period": "days",
+                                            "count": 365
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "tollSystems": [
+                        {
+                            "id": 7558,
+                            "name": "VIGNETTE LAKD"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

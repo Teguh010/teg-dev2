@@ -1,0 +1,198 @@
+"use client";
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+
+// Token expired untuk testing
+const EXPIRED_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzU2MzYxMDg0LCJqdGkiOiJjN2JjZDMxNS1lNmJjLTQ1NTItODlmNS0xZTU3MDVlNGNkMjAiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiZmU4NmMxYjAtMzY0ZS00ZWI0LTg3MmQtZmM0ZWNjYmQwODM1IiwiZXhwIjoxNzU2MzYxNTI0fQ.9GZfVVjB27QUjUjBrkeuQeMaD7pCdMG3yFOL46dkeEk";
+
+export const TokenExpiredTest = () => {
+  const [isExpired, setIsExpired] = useState(false);
+  const [tokenInfo, setTokenInfo] = useState<{
+    error?: string;
+    exp?: number;
+    now?: number;
+    expired?: boolean;
+    expDate?: string;
+    currentDate?: string;
+    timeUntilExpiry?: number;
+  } | null>(null);
+  const [localStorageKeys, setLocalStorageKeys] = useState<string[]>([]);
+
+  const checkCurrentToken = () => {
+    const userData = JSON.parse(localStorage.getItem('userData-manager') || '{}');
+    const token = userData.token;
+    
+    if (!token) {
+      setTokenInfo({ error: 'No token found' });
+      return;
+    }
+    
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      const exp = payload.exp;
+      const now = Math.floor(Date.now() / 1000);
+      const expired = now > exp;
+      
+      setTokenInfo({
+        exp: exp,
+        now: now,
+        expired: expired,
+        expDate: new Date(exp * 1000).toLocaleString(),
+        currentDate: new Date(now * 1000).toLocaleString(),
+        timeUntilExpiry: exp - now
+      });
+      
+      setIsExpired(expired);
+    } catch {
+      setTokenInfo({ error: 'Invalid token format' });
+    }
+  };
+
+  const setExpiredToken = () => {
+    const userData = JSON.parse(localStorage.getItem('userData-manager') || '{}');
+    const updatedUserData = {
+      ...userData,
+      token: EXPIRED_TOKEN
+    };
+    
+    localStorage.setItem('userData-manager', JSON.stringify(updatedUserData));
+    checkCurrentToken();
+  };
+
+  const restoreToken = () => {
+    // Clear ALL auth data to force re-login
+    // Clear all role-specific user data
+    localStorage.removeItem('userData-client');
+    localStorage.removeItem('userData-manager');
+    localStorage.removeItem('userData-developer');
+    
+    // Clear common data
+    localStorage.removeItem('current-role');
+    localStorage.removeItem('is-manager-token');
+    localStorage.removeItem('token');
+    localStorage.removeItem('userId');
+    
+    // Clear app-specific data
+    localStorage.removeItem('manager-selected-customer');
+    localStorage.removeItem('selected-vehicle');
+    
+    // Clear all translation cache keys
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('translations_')) {
+        localStorage.removeItem(key);
+      }
+    });
+    
+    setTokenInfo(null);
+    setIsExpired(false);
+    
+    console.log('All auth data cleared. Current localStorage keys:', Object.keys(localStorage));
+    checkLocalStorage();
+  };
+
+  const checkLocalStorage = () => {
+    const keys = Object.keys(localStorage);
+    setLocalStorageKeys(keys);
+    console.log('📦 Current localStorage keys:', keys);
+    console.log('📦 localStorage contents:', 
+      keys.reduce((acc, key) => {
+        acc[key] = localStorage.getItem(key);
+        return acc;
+      }, {} as Record<string, string | null>)
+    );
+  };
+
+  return (
+    <Card className="w-full max-w-2xl mx-auto">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          🔧 Token Expired Test
+          <Badge variant="outline" className={isExpired ? "bg-red-100 text-red-700" : "bg-green-100 text-green-700"}>
+            {isExpired ? "EXPIRED" : "VALID"}
+          </Badge>
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="flex gap-2 flex-wrap">
+          <Button onClick={checkCurrentToken} variant="outline">
+            Check Current Token
+          </Button>
+          <Button onClick={setExpiredToken} variant="outline" className="bg-red-50 hover:bg-red-100">
+            Set Expired Token
+          </Button>
+          <Button onClick={restoreToken} variant="outline">
+            Clear Token (Force Re-login)
+          </Button>
+          <Button onClick={checkLocalStorage} variant="outline">
+            Check localStorage
+          </Button>
+        </div>
+
+        {tokenInfo && (
+          <div className="space-y-2 p-4 bg-gray-50 rounded-lg">
+            {tokenInfo.error ? (
+              <p className="text-red-600">{tokenInfo.error}</p>
+            ) : (
+              <>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <strong>Expires at:</strong>
+                    <br />
+                    {tokenInfo.expDate}
+                  </div>
+                  <div>
+                    <strong>Current time:</strong>
+                    <br />
+                    {tokenInfo.currentDate}
+                  </div>
+                </div>
+                <div className="text-sm">
+                  <strong>Time until expiry:</strong> {tokenInfo.timeUntilExpiry} seconds
+                </div>
+                <div className="text-sm">
+                  <strong>Status:</strong> 
+                  <Badge variant={tokenInfo.expired ? "outline" : "outline"} className={`ml-2 ${tokenInfo.expired ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+                    {tokenInfo.expired ? "EXPIRED" : "VALID"}
+                  </Badge>
+                </div>
+              </>
+            )}
+          </div>
+        )}
+
+        {localStorageKeys.length > 0 && (
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="font-semibold mb-2">localStorage Keys ({localStorageKeys.length}):</p>
+            <ul className="list-disc list-inside text-sm space-y-1">
+              {localStorageKeys.map(key => (
+                <li key={key} className={
+                  ['manager-selected-customer', 'userData-client', 'current-role', 'selected-vehicle'].includes(key)
+                    ? 'text-red-600 font-bold'
+                    : 'text-gray-700'
+                }>
+                  {key}
+                  {['manager-selected-customer', 'userData-client', 'current-role', 'selected-vehicle'].includes(key) && (
+                    <span className="ml-2 text-xs bg-red-100 px-2 py-1 rounded">⚠️ Should be cleared</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div className="text-sm text-gray-600">
+          <p><strong>Instructions:</strong></p>
+          <ol className="list-decimal list-inside space-y-1 mt-2">
+            <li>Click "Set Expired Token" to replace current token with expired one</li>
+            <li><strong>RELOAD the page manually (F5 or Cmd+R)</strong></li>
+            <li>Click "Check localStorage" to see what data remains</li>
+            <li>manager-selected-customer, userData-client, current-role should ALL be cleared</li>
+            <li>Use "Clear Token" to reset and login again</li>
+          </ol>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
