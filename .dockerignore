@@ -1,59 +1,11 @@
-# Dependencies
 node_modules
+.git
+docker-compose.yml
 npm-debug.log
 yarn-error.log
-package-lock.json.bak
-
-# Git
-.git
-.gitignore
-.gitattributes
-
-# CI/CD
-.github
-.gitlab-ci.yml
-docker-compose.yml
-Dockerfile
-.dockerignore
-
-# IDE
+*.md
+*.log
 .vscode
 .idea
-*.swp
-*.swo
-*~
-
-# Testing & Coverage
 coverage
-.nyc_output
-test-results
-
-# Build outputs (will be generated in container)
-.next
 dist
-build
-out
-
-# Logs
-*.log
-logs
-
-# Documentation
-*.md
-README.md
-CHANGELOG.md
-docs
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Environment files (should use build args/secrets instead)
-# .env          # Temporarily allow .env for build (TODO: use build args instead)
-.env.local
-.env*.local
-
-# Temporary files
-tmp
-temp
-*.tmp
