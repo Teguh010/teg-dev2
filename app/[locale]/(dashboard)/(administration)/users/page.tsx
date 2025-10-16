@@ -13,7 +13,7 @@ export default function UsersPage() {
   const { t } = useTranslation();
   const router = useRouter();
 
-  // State untuk modal konfirmasi delete
+  // State for Delete Modal
   const [deleteModal, setDeleteModal] = useState({ open: false, userId: null });
   const [loadingDelete, setLoadingDelete] = useState(false);
 
