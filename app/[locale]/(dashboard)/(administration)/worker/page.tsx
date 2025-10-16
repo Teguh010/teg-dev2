@@ -22,7 +22,7 @@ export default function WorkerPage() {
   const [workersWithoutUsers, setWorkersWithoutUsers] = useState([]);
   // State untuk modal konfirmasi unassign
   const [unassignModal, setUnassignModal] = useState({ open: false, workerId: null });
-  // State untuk modal konfirmasi delete
+  // State for delete confirmation modal
   const [deleteModal, setDeleteModal] = useState({ open: false, workerId: null });
   const [loadingDelete, setLoadingDelete] = useState(false);
 
