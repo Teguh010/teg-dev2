@@ -151,7 +151,7 @@ export default function WorkerPage() {
             <span className="ml-2">Unassign User</span>
           </Button>
         )}
-        {/* Jika worker belum punya user, tetap tampilkan tombol Assign User */}
+        {/* If worker has no user, show Assign User button */}
         {canEditWorker && isUnassigned && (
           <Button
             variant="outline"
