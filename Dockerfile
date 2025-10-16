@@ -7,12 +7,12 @@ FROM node:24-alpine AS base
 
 WORKDIR /app
 
-# Disable telemetry
+# Disable telemetry and ESLint in build
 ENV NEXT_TELEMETRY_DISABLED=1 \
     NEXTJS_IGNORE_ESLINT=1 \
     NODE_ENV=production
 
-# For native dependencies
+# For native dependencies and curl (used by Coolify)
 RUN apk add --no-cache libc6-compat curl
 
 
@@ -21,10 +21,10 @@ RUN apk add --no-cache libc6-compat curl
 # ===========================================================
 FROM base AS deps
 
-# Copy only package files for caching
+# Copy only package files for cache efficiency
 COPY package.json package-lock.json ./
 
-# Use cache mount for npm
+# Use cache mount for npm install
 RUN --mount=type=cache,target=/root/.npm \
     start_time=$(date +%s) && \
     echo "📦 Installing dependencies..." && \
@@ -40,22 +40,23 @@ RUN --mount=type=cache,target=/root/.npm \
 FROM base AS builder
 WORKDIR /app
 
-# Copy node_modules from deps
+# Copy node_modules from deps (cached)
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Use cache for npm + log build time
+# Cache both npm and .next/cache for faster rebuilds
 RUN --mount=type=cache,target=/root/.npm \
+    --mount=type=cache,target=.next/cache \
     start_time=$(date +%s) && \
     echo "🚀 Starting Next.js build at $(date)" && \
-    npm run build || (echo "❌ Build failed!" && exit 1) && \
+    npm run build --no-lint || (echo "❌ Build failed!" && exit 1) && \
     end_time=$(date +%s) && \
     duration=$((end_time - start_time)) && \
     echo "✅ Build completed in $((duration / 60))m $((duration % 60))s."
 
 
 # ===========================================================
-# Runtime layer
+# Runtime layer (smaller + faster)
 # ===========================================================
 FROM node:24-alpine AS runner
 WORKDIR /app
@@ -72,14 +73,24 @@ RUN apk add --no-cache curl
 # Install PM2 + logrotate
 RUN npm install -g pm2 pm2-logrotate && pm2 update
 
-# Copy necessary files from builder
+# Copy only what's needed
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+
+# Install only production dependencies
+RUN --mount=type=cache,target=/root/.npm \
+    start_time=$(date +%s) && \
+    echo "📦 Installing production dependencies..." && \
+    npm ci --omit=dev --legacy-peer-deps --loglevel=error --no-fund && \
+    end_time=$(date +%s) && \
+    duration=$((end_time - start_time)) && \
+    echo "✅ Production deps installed in $((duration / 60))m $((duration % 60))s."
+
+# Copy PM2 config
 COPY --from=builder /app/pm2.config.js ./pm2.config.js
 
-# Add non-root user
+# Add non-root user for security
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs
 USER nextjs
@@ -87,5 +98,5 @@ USER nextjs
 # Expose port
 EXPOSE 3000
 
-# Start the app
+# Start app
 CMD ["pm2-runtime", "start", "pm2.config.js"]
