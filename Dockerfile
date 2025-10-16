@@ -1,91 +1,80 @@
-# syntax=docker/dockerfile:labs
+# syntax=docker/dockerfile:1
 
-# ===========================================================
-# Base image
-# ===========================================================
 FROM node:24-alpine AS base
 
+# No need to install npm separately - Node 24 comes with npm ~10.8.x
+
+# Install dependencies only when needed
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Disable telemetry & optimize env
-ENV NEXT_TELEMETRY_DISABLED=1 \
-    NEXTJS_IGNORE_ESLINT=1 \
-    NODE_ENV=production
+# Install dependencies based on the preferred package manager
+COPY package.json package-lock.json* ./
+RUN \
+  if [ -f package-lock.json ]; then npm install --legacy-peer-deps --loglevel=error --no-fund; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
 
-# For native dependencies and curl (used by Coolify)
-RUN apk add --no-cache libc6-compat curl
-
-
-# ===========================================================
-# Dependencies layer (cached)
-# ===========================================================
-FROM base AS deps
-
-# Copy only package files for better caching
-COPY package.json package-lock.json ./
-
-# Use cache mount for npm install
-RUN --mount=type=cache,target=/root/.npm \
-    start_time=$(date +%s) && \
-    echo "📦 Installing dependencies..." && \
-    npm ci --legacy-peer-deps --loglevel=error --no-fund && \
-    end_time=$(date +%s) && \
-    duration=$((end_time - start_time)) && \
-    echo "✅ Dependencies installed in $((duration / 60))m $((duration % 60))s."
-
-
-# ===========================================================
-# Build layer
-# ===========================================================
+# Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
-
-# Copy node_modules from deps (cached)
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Cache both npm and .next/cache for faster rebuilds
-RUN --mount=type=cache,target=/root/.npm \
-    --mount=type=cache,target=.next/cache \
-    start_time=$(date +%s) && \
-    echo "🚀 Starting Next.js build at $(date)" && \
-    npm run build --no-lint || (echo "❌ Build failed!" && exit 1) && \
-    end_time=$(date +%s) && \
-    duration=$((end_time - start_time)) && \
-    echo "✅ Build completed in $((duration / 60))m $((duration % 60))s."
+# Next.js collects anonymous telemetry data about general usage.
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXTJS_IGNORE_ESLINT=1
 
+# Debug: List files to verify content
+RUN ls -la
 
-# ===========================================================
-# Runtime layer (production only)
-# ===========================================================
-FROM node:24-alpine AS runner
+# Debug: Check next.config.js content
+RUN if [ -f next.config.js ]; then cat next.config.js; fi
+
+# Try to build with more verbose output
+RUN \
+  if [ -f package-lock.json ]; then NEXTJS_IGNORE_ESLINT=1 npm run build || (echo "Build failed" && NEXTJS_IGNORE_ESLINT=1 npm run build --verbose); \
+  else echo "Lockfile not found." && exit 1; \
+  fi
+
+# Production image, copy all the files and run next
+FROM base AS runner
 WORKDIR /app
 
-ENV NODE_ENV=production \
-    NEXT_TELEMETRY_DISABLED=1 \
-    PORT=3000 \
-    HOSTNAME=0.0.0.0
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
-# For Coolify healthchecks
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# For Coolify health checks
 RUN apk add --no-cache curl
 
-# Install PM2 + logrotate
-RUN npm install -g pm2 pm2-logrotate && pm2 update
+# Setup PM2
+RUN npm install -g pm2
+RUN pm2 install pm2-logrotate
+RUN pm2 update
 
-# Copy necessary build files
+# Copy necessary files for running the application
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/pm2.config.js ./pm2.config.js
 
-# Add non-root user for security
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 nextjs
+# Copy the built app
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nodejs /app/pm2.config.js ./pm2.config.js
+
+# Only set permissions for .next/cache
+RUN mkdir -p .next/cache/images && chown -R nextjs:nodejs .next/cache
+
 USER nextjs
 
-# Expose port
 EXPOSE 3000
 
-# Start app
-CMD ["pm2-runtime", "start", "pm2.config.js", "--no-daemon"]
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+# Start the server
+#CMD ["npm", "start"]
+CMD sh -c "pm2 ping && pm2-runtime start pm2.config.js"

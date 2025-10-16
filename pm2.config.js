@@ -1,18 +1,13 @@
 module.exports = {
   apps: [
     {
-      name: 'tracegrid-frontend',
-      script: 'npm',
-      args: 'run start',
-      exec_mode: 'fork',
+      name: 'TraceGrid frontend',
+      script: './node_modules/next/dist/bin/next',
+      args: 'start',
+      exec_mode: 'cluster',
       watch: false,
       autorestart: true,
-      instances: 1,
-      env: {
-        NODE_ENV: 'production',
-        PORT: 3000,
-        HOSTNAME: '0.0.0.0',
-      },
+      instances: 'max',
     },
   ],
 };
