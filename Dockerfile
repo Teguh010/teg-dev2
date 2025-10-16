@@ -56,12 +56,11 @@ RUN --mount=type=cache,target=/root/.npm \
 
 
 # ===========================================================
-# Runtime layer (smaller + faster)
+# Runtime layer (production only)
 # ===========================================================
 FROM node:24-alpine AS runner
 WORKDIR /app
 
-# Environment
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
     PORT=3000 \
@@ -77,18 +76,17 @@ RUN npm install -g pm2 pm2-logrotate && pm2 update
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/pm2.config.js ./pm2.config.js
 
-# Install only production dependencies
+# Remove dev dependencies (safe method)
 RUN --mount=type=cache,target=/root/.npm \
     start_time=$(date +%s) && \
-    echo "📦 Installing production dependencies..." && \
-    npm ci --omit=dev --legacy-peer-deps --loglevel=error --no-fund && \
+    echo "🧹 Pruning dev dependencies..." && \
+    npm prune --omit=dev --loglevel=error && \
     end_time=$(date +%s) && \
     duration=$((end_time - start_time)) && \
-    echo "✅ Production deps installed in $((duration / 60))m $((duration % 60))s."
-
-# Copy PM2 config
-COPY --from=builder /app/pm2.config.js ./pm2.config.js
+    echo "✅ Dev dependencies pruned in $((duration / 60))m $((duration % 60))s."
 
 # Add non-root user for security
 RUN addgroup --system --gid 1001 nodejs && \
