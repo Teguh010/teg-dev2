@@ -83,7 +83,7 @@ export default function UsersPage() {
         ifSearch={true}
         searchList={models.searchList}
       />
-      {/* Delete User Confirmation Modal */}
+      {/* Delete User Confirmation Modal. */}
       {deleteModal.open && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50">
           <div className="bg-white rounded-lg p-6 min-w-[320px]">
