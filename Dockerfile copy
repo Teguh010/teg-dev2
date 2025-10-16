@@ -26,12 +26,9 @@ COPY package.json package-lock.json ./
 
 # Use cache mount for npm
 RUN --mount=type=cache,target=/root/.npm \
-    start_time=$(date +%s) && \
     echo "📦 Installing dependencies..." && \
     npm ci --legacy-peer-deps --loglevel=error --no-fund && \
-    end_time=$(date +%s) && \
-    duration=$((end_time - start_time)) && \
-    echo "✅ Dependencies installed in $((duration / 60))m $((duration % 60))s."
+    echo "✅ Dependencies installed."
 
 
 # ===========================================================
@@ -44,14 +41,10 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Use cache for npm + log build time
 RUN --mount=type=cache,target=/root/.npm \
-    start_time=$(date +%s) && \
-    echo "🚀 Starting Next.js build at $(date)" && \
-    npm run build || (echo "❌ Build failed!" && exit 1) && \
-    end_time=$(date +%s) && \
-    duration=$((end_time - start_time)) && \
-    echo "✅ Build completed in $((duration / 60))m $((duration % 60))s."
+    echo "🚀 Building Next.js app..." && \
+    npm run build && \
+    echo "✅ Build completed."
 
 
 # ===========================================================
