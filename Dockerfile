@@ -88,4 +88,4 @@ USER nextjs
 EXPOSE 3000
 
 # Start app
-CMD ["pm2-runtime", "start", "pm2.config.js"]
+CMD ["pm2-runtime", "start", "pm2.config.js", "--no-daemon"]
