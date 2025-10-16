@@ -28,7 +28,7 @@ export default function WorkerPage() {
 
   useEffect(() => {
     operations.fetchWorkers();
-    // Fetch workers without users untuk kebutuhan tombol assign
+    // Fetch workers without users untuk kebutuhan tombol assign..
     operations.getWorkersWithoutUsers().then(setWorkersWithoutUsers).catch(() => setWorkersWithoutUsers([]));
   }, []);
 
