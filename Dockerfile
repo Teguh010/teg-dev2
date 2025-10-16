@@ -7,7 +7,7 @@ FROM node:24-alpine AS base
 
 WORKDIR /app
 
-# Disable telemetry and ESLint in build
+# Disable telemetry & optimize env
 ENV NEXT_TELEMETRY_DISABLED=1 \
     NEXTJS_IGNORE_ESLINT=1 \
     NODE_ENV=production
@@ -21,7 +21,7 @@ RUN apk add --no-cache libc6-compat curl
 # ===========================================================
 FROM base AS deps
 
-# Copy only package files for cache efficiency
+# Copy only package files for better caching
 COPY package.json package-lock.json ./
 
 # Use cache mount for npm install
@@ -72,21 +72,12 @@ RUN apk add --no-cache curl
 # Install PM2 + logrotate
 RUN npm install -g pm2 pm2-logrotate && pm2 update
 
-# Copy only what's needed
+# Copy necessary build files
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/pm2.config.js ./pm2.config.js
-
-# Remove dev dependencies (safe method)
-RUN --mount=type=cache,target=/root/.npm \
-    start_time=$(date +%s) && \
-    echo "🧹 Pruning dev dependencies..." && \
-    npm prune --omit=dev --loglevel=error && \
-    end_time=$(date +%s) && \
-    duration=$((end_time - start_time)) && \
-    echo "✅ Dev dependencies pruned in $((duration / 60))m $((duration % 60))s."
 
 # Add non-root user for security
 RUN addgroup --system --gid 1001 nodejs && \
